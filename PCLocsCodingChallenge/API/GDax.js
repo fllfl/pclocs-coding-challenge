@@ -19,7 +19,7 @@ export default class GDax {
   }
 
   openSocket = (productIds) => {
-    const ws = new WebSocket('wss://ws-feed-public.sandbox.gdax.com');
+    const ws = new WebSocket(Constants.webSocketFeed);
     ws.onopen = () => {
       ws.send(JSON.stringify({
         type: 'subscribe',
