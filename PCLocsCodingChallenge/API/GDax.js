@@ -41,7 +41,7 @@ export default class GDax {
 
     ws.onerror = (e) => {
       console.log(e.message);
-      this.errorCallback(error);
+      this.errorCallback(e);
     };
 
     ws.onclose = (e) => {
